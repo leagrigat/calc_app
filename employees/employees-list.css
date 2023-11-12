@@ -1,0 +1,139 @@
+/* =======================================================================
+CONTENT
+========================================================================== */
+
+.content-employees {
+    padding: 3rem 8rem;
+    gap: 1rem;
+}
+
+/* =======================================================================
+HEADING + BUTTONS
+========================================================================== */
+/* .heading-buttons {
+    padding: 1.5rem 0;
+} */
+
+.employees-buttons {
+    gap: 1.5rem;
+}
+
+.button-new {
+    background-color: var(--clr-accent-100);
+    width: fit-content;
+    padding: .6rem .9rem;
+    gap: .5rem;
+    border-radius: 5px;
+} 
+
+.button-new svg {
+    color: var(--clr-primary-900);
+}
+
+.button-filter {
+    background-color: var(--clr-primary-300);
+    width: fit-content;
+    padding: .6rem .9rem;
+    gap: .5rem;
+    border-radius: 5px;
+}
+
+.button-filter svg {
+    color: var(--clr-primary-900);
+}
+
+/* =======================================================================
+TABLE
+========================================================================== */
+
+.table-content {
+    gap: 1rem;
+    text-align: center;
+}
+
+.table-head {
+    padding: 1rem 2rem;
+    width: 100%;
+    grid-area: header;
+    justify-items: center;
+}
+
+.info-with-icon {
+    width: 100%;
+    gap: 1rem;
+}
+
+.employees-info {
+    background-color: var(--clr-primary-50);
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    width: 100%;
+}
+
+/* .employees-info, .table-head {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+} */
+
+.remove-employee {
+    background-color: var(--clr-primary-100);
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    align-self: start;
+}
+
+.table-grid {
+    grid-template-areas: 
+        "header ."
+        "row1 button1"
+        "row2 button2"
+        "row3 button3";
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto 42px;
+}
+
+.row1 {
+    grid-area: row1;
+}
+.row2 {
+    grid-area: row2;
+}
+.row3 {
+    grid-area: row3;
+}
+.button1 {
+    grid-area: button1;
+}
+.button2 {
+    grid-area: button2;
+}
+.button3 {
+    grid-area: button3;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 40px repeat(4, 1fr);
+    align-items: center;
+}
+
+.table-row img {
+    height: 40px;
+    width: 40px;
+    /* cover and contain sorgen dafür, dass aspect ratio beibehalten wird */
+    object-fit: cover;
+    border-radius: 1000rem;
+    box-shadow: 0px 3.62385px 7.2477px 0px rgba(0, 0, 0, 0.10);
+}
+
+.table-row:hover,
+.remove-employee:hover,
+.employees-buttons a:hover {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.table-head:hover {
+    box-shadow: none;
+}
